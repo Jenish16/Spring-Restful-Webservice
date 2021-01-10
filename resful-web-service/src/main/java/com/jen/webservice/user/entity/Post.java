@@ -1,4 +1,4 @@
-package com.jen.webservice.user;
+package com.jen.webservice.user.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

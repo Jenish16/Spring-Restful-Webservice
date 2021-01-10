@@ -1,4 +1,4 @@
-package com.jen.webservice.user;
+package com.jen.webservice.user.controller;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -20,6 +20,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import com.jen.webservice.user.entity.Post;
+import com.jen.webservice.user.entity.User;
+import com.jen.webservice.user.exception.UserNotFoundException;
+import com.jen.webservice.user.repository.PostRepository;
+import com.jen.webservice.user.repository.UserRepository;
 
 @RestController
 public class UserJPAResource {

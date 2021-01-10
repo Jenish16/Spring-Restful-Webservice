@@ -1,4 +1,4 @@
-package com.jen.webservice.user;
+package com.jen.webservice.user.controller;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -20,6 +20,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.jen.webservice.user.entity.User;
+import com.jen.webservice.user.exception.UserNotFoundException;
+import com.jen.webservice.user.service.UserDaoService;
+
 @RestController
 public class UserResource {
 
@@ -36,7 +40,7 @@ public class UserResource {
 		User user = service.findOne(id);
 		
 		if(user==null)
-			throw new UserNotFoundException("id-"+ id);
+			throw new UserNotFoundException("id-"+ id+" Not Found");
 		
 		
 		//"all-users", SERVER_PATH + "/users"

@@ -1,4 +1,4 @@
-package com.jen.webservice.user;
+package com.jen.webservice.user.entity;
 
 import java.util.Date;
 import java.util.List;

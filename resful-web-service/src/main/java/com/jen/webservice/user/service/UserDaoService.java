@@ -1,4 +1,4 @@
-package com.jen.webservice.user;
+package com.jen.webservice.user.service;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
+
+import com.jen.webservice.user.entity.User;
 
 @Component
 public class UserDaoService {
